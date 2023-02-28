@@ -124,6 +124,11 @@
         float: right;
         display: block;
     }
+
+    .topbar .title h1 {
+        font-size: 30px;
+        text-align: right;
+    }
 }
 
 @media screen and (max-width: 600px) {

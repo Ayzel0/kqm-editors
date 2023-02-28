@@ -20,7 +20,13 @@
 
 .text-bubble-box p {
     color: white;
-    font-family: 'Lucida Sans';
+    font-family: 'Trebuchet MS';
     font-size: 20px;
     margin: 20px 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .text-bubble-box h1 {
+        width: 100%;
+    }
 }
