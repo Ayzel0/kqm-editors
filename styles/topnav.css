@@ -77,6 +77,10 @@
     margin: 0;
 }
 
+.dropdown .active {
+    background-color: #691c88;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;

@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./styles/topnav.css" rel="stylesheet">
-    <link href="./styles/homepage.css" rel="stylesheet">
-    <link href="./styles/global.css" rel="stylesheet">
+    <link href="../styles/topnav.css" rel="stylesheet">
+    <link href="../styles/homepage.css" rel="stylesheet">
+    <link href="../styles/global.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body id="dark-theme">
     <div class="topbar">
-        <img class="kqmlogo" src="./kqm icon.png">
+        <img class="kqmlogo" src="../kqm icon.png">
         <div class="title">
             <h1>KQM Editor Resources</h1>
         </div>
     </div>
     <div class="topnav" id="responsiveNav">
-        <a href="./index.html" class="active">Home</a>
-        <a href="./pages/css.html">CSS Resources</a>
-        <a href="./pages/tc.html">Theorycrafting Resources</a>
+        <a href="../index.html">Home</a>
+        <a href="../pages/css.html" class="active">CSS Resources</a>
+        <a href="../pages/tc.html">Theorycrafting Resources</a>
         <div class="dropdown">
           <button class="dropbtn">Links</button>
-          <div class="dropdown-content">
-            <a href="./pages/guidelines.html">Guidelines</a>
-            <a href="./pages/video-guides.html">Video Guides</a>
-            <a href="./pages/queue.html">Queue</a>
+          <div class="dropdown-content active">
+            <a href="guidelines.html">Guidelines</a>
+            <a href="video-guides.html">Video Guides</a>
+            <a href="queue.html">Queue</a>
           </div>
         </div>
-        <a href="./pages/request.html">Request</a>
+        <a href="request.html">Request</a>
         <a style="font-size:15px;" class="icon" onclick="hamburgerMenu()">&#9776;</a>
     </div>
     <div class="opening-paragraph">
@@ -38,7 +38,7 @@
         </div>
     </div>
 </body>
-<script src="./scripts/scroll-animation.js"></script>
+<script src="../scripts/scroll-animation.js"></script>
 <script>
     function hamburgerMenu() {
         const x = document.getElementById("responsiveNav");
