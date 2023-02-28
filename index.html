@@ -5,24 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles/topnav.css" rel="stylesheet">
-    <link href="./styles/topnav.css" rel="stylesheet">
+    <link href="./styles/homepage.css" rel="stylesheet">
+    <link href="./styles/global.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <div class="topnav">
-        <a href="#" class="active">Home</a>
-        <a href="#">CSS Resources</a>
-        <a href="#">Guide List</a>
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
+<body id="dark-theme">
+    <div class="topbar">
+        <img class="kqmlogo" src="./kqm icon.png">
+        <div class="title">
+            <h1>KQM Editor Resources</h1>
         </div>
     </div>
-    <h1></h1>
+    <div class="topnav" id="responsiveNav">
+        <a href="#home" class="active">Home</a>
+        <a href="">CSS Resources</a>
+        <a href="#contact">Theorycrafting Resources</a>
+        <div class="dropdown">
+          <button class="dropbtn">Links</button>
+          <div class="dropdown-content">
+            <a href="#">Guidelines</a>
+            <a href="#">Video Guides</a>
+            <a href="#">Something, idk</a>
+          </div>
+        </div>
+        <a href="#about">Request</a>
+        <a style="font-size:15px;" class="icon" onclick="hamburgerMenu()">&#9776;</a>
+    </div>
+    <div class="opening-paragraph">
+        <div class="text-bubble-box">
+            <h1>About This Site</h1>
+            <p>Ayzel here. KQM's editor resources are very scattered, which is something that numerous editors have noted. This makes it difficult to find even basic things, and makes learning CSS impossible, which also screws with any kind of guide CSS standardization we want to do. This website is designed to be a repository of all KQM website resources; people can look here if they're just starting their editor journey or if they're experienced editors wanting access to other editor-designed CSS elements/want to just refresh their memories about the basics.</p>
+        </div>
+    </div>
+    <div class="quick-nav-container">
+        
+    </div>
 </body>
 <script src="./scripts/scroll-animation.js"></script>
+<script>
+    function hamburgerMenu() {
+        const x = document.getElementById("responsiveNav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
 </html>

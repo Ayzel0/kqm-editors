@@ -1,0 +1,26 @@
+#dark-theme {
+    background-color: #101010;
+}
+
+.text-bubble-box {
+    background: #28202a;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.text-bubble-box h1 {
+    border-bottom: 5px solid white;
+    color: white;
+    font-size: 32px;
+    margin: 20px 40px;
+    padding: 10px;
+    width: 20%;
+    font-family: 'Trebuchet MS';
+}
+
+.text-bubble-box p {
+    color: white;
+    font-family: 'Lucida Sans';
+    font-size: 20px;
+    margin: 20px 40px;
+}
