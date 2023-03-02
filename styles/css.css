@@ -15,7 +15,7 @@ body {
     background-color: var(--bubble-color);
 
     /* transitions */
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
 
     /* aligning content in the bubble */
     display: flex;
@@ -29,7 +29,11 @@ body {
 }
 
 .expanding-bubble:hover {
-    transform: scale(1.5);
+    transform: scale(1.25) translateX(-40px);
+}
+
+.expanding-bubble:hover > .flex-grid-container p {
+    color: purple;
 }
 
 .bubble-grid {
@@ -49,4 +53,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.flex-grid-container p {
+    color: white;
 }
