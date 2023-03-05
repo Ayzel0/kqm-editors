@@ -1,0 +1,60 @@
+body {
+    font-family: 'Trebuchet MS';
+}
+
+.expanding-bubble {
+    /* variables */
+    --bubble-size: 200px;
+    --bubble-color: rgb(236, 194, 116);
+    --expansion-amount: 50px;
+
+    /* shape and size */
+    height: var(--bubble-size);
+    width: var(--bubble-size);
+    border-radius: var(--bubble-size);
+    background-color: var(--bubble-color);
+
+    /* transitions */
+    transition: transform 0.5s ease;
+
+    /* aligning content in the bubble */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* formatting content */
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.expanding-bubble:hover {
+    transform: scale(1.25) translateX(-40px);
+}
+
+.expanding-bubble:hover > .flex-grid-container p {
+    color: purple;
+}
+
+.bubble-grid {
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+}
+
+.column {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-grid-container p {
+    color: white;
+}
