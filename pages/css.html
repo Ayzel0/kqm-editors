@@ -150,11 +150,16 @@
 
     function expandTable() {
         const content = document.getElementById("expand-table-info");
+        const button = document.getElementById("expand-table-button")
         if(getComputedStyle(content).height == "0px") {
             content.style.height = "100%";
+            button.style.borderBottomLeftRadius = "0px";
+            button.style.borderBottomRightRadius = "0px";
         }
         else {
             content.style.height = "0px";
+            button.style.borderBottomLeftRadius = "25px";
+            button.style.borderBottomRightRadius = "25px";
         }
     }
 </script>

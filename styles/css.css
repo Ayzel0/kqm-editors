@@ -187,14 +187,15 @@ body {
 #expand-table-button {
     width: 100%;
     border: none;
-    background: inherit;
+    background: rgba(198, 107, 156, 0.502);
     text-align: left;
     cursor: pointer;
     color: white;
     font-size: 22px;
     padding: 14px 28px;
     font-weight: bold;
-    border-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 #expand-table-info {
