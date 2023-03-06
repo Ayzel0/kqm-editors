@@ -58,6 +58,7 @@ body {
 @media screen and (max-width: 1200px) {
     .bubble-grid {
         grid-template-columns: 1fr;
+        row-gap: 4vh;
     }
 }
 
@@ -65,6 +66,7 @@ body {
     margin: 50px;
     display: flex;
     justify-content: center;
+    transition: height 0.5s ease;
 }
 
 .col-width {
@@ -180,4 +182,22 @@ body {
 
 .rounded-corners tr:last-child td:last-child {
     border-bottom-right-radius: 5px;
+}
+
+#expand-table-button {
+    width: 100%;
+    border: none;
+    background: inherit;
+    text-align: left;
+    cursor: pointer;
+    color: white;
+    font-size: 22px;
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+#expand-table-info {
+    height: 0;
+    overflow: hidden;
 }

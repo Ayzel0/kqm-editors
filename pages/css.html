@@ -7,6 +7,7 @@
     <link href="../styles/topnav.css" rel="stylesheet">
     <link href="../styles/css.css" rel="stylesheet">
     <link href="../styles/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body id="dark-theme">
@@ -54,81 +55,83 @@
     <div class="column">
         <div class="col-width">
             <h1 class="title">KQM CSS Resources</h1>
-            <h2 class="subtitle">Tables</h2>
-            <p class="paragraph">Tables are a key part of a lot of KQM guides, and there are a lot of different ways that they can be used to present information. Here's a few of the different tables we've made in the past for KQM guides that you can use in transcription:</p>
-            <h2 class="subtitle">Rounded Corners Table</h2>
-            <h3 class="block-title">HTML</h3>
-            <code class="code-block">
-                &lt;table class=&quot;rounded-corners&quot;&gt;<br>
-                &ensp;&lt;tr&gt;&lt;th&gt;Weapon Name&lt;/th&gt;&lt;th&gt;Damage&lt;/th&gt;&lt;th&gt;Percentage&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;<br>
-                &ensp;&lt;tr&gt;&lt;td&gt;Weapon A&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
-                &ensp;&lt;tr&gt;&lt;td&gt;Weapon B&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
-                &ensp;&lt;tr&gt;&lt;td&gt;Weapon C&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
-                &lt;/table&gt;
-            </code>
-            <h3 class="block-title">CSS</h3>
-            <code class="code-block">
-                :root {<br>
-                &emsp;&emsp;--table-border-width: 2px;<br>
-                &emsp;&emsp;--primary-color: #29232E;<br>
-                &emsp;&emsp;--secondary-color: #9858C6;<br>
-                &emsp;&emsp;--tertiary-color: #302936;<br>
-                &emsp;&emsp;--quantenary-color: #504b5562;<br>
-                }<br>
-                <br>
-                .rounded-corners {<br>
-                &emsp;&emsp;border-collapse: separate;<br>
-                &emsp;&emsp;border-spacing: 0;<br>
-                &emsp;&emsp;min-width: 30vw;<br>
-                &emsp;&emsp;color: white;<br>
-                }<br>
-                <br>
-                .rounded-corners tr th,<br>
-                .rounded-corners tr td {<br>
-                    &emsp;&emsp;border-right: var(--table-border-width) solid var(--primary-color);<br>
-                    &emsp;&emsp;border-bottom: var(--table-border-width) solid var(--primary-color);<br>
-                    &emsp;&emsp;padding: 5px;<br>
-                }<br>
-                <br>
-                .rounded-corners tr th:first-child,<br>
-                .rounded-corners tr td:first-child {<br>
-                    &emsp;&emsp;border-left: var(--table-border-width) solid var(--primary-color);<br>
-                }<br>
-                <br>
-                .rounded-corners tr th {<br>
-                    &emsp;&emsp;background: var(--tertiary-color);<br>
-                    &emsp;&emsp;border-top: var(--table-border-width) solid var(--primary-color);<br>
-                    &emsp;&emsp;text-align: left;<br>
-                }<br>
-                <br>
-                .rounded-corners tr td {<br>
-                    &emsp;&emsp;background-color: var(--quantenary-color);<br>
-                }<br>
-                <br>
-                .rounded-corners tr:first-child th:first-child {<br>
-                    &emsp;&emsp;border-top-left-radius: 5px;<br>
-                }<br>
-                <br>
-                .rounded-corners tr:first-child th:last-child {<br>
-                    &emsp;&emsp;border-top-right-radius: 5px;<br>
-                }<br>
-                <br>
-                .rounded-corners tr:last-child td:first-child {<br>
-                    &emsp;&emsp;border-bottom-left-radius: 5px;<br>
-                }<br>
-                <br>
-                .rounded-corners tr:last-child td:last-child {<br>
-                    &emsp;&emsp;border-bottom-right-radius: 5px;<br>
-                }<br>
-            </code>
-            <h3 class="block-title">Result</h3>
-            <div class="css-example-content">
-                <table class="rounded-corners">
-                    <tr><th>Weapon Name</th><th>Damage</th><th>Percentage</th><th>Description</th></tr>
-                    <tr><td>Weapon A</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
-                    <tr><td>Weapon B</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
-                    <tr><td>Weapon C</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
-                </table>
+            <button onclick = "expandTable()" id="expand-table-button"><i class="fa fa-caret-down"></i>&ensp;Tables</button>
+            <div id="expand-table-info">
+                <p class="paragraph">Tables are a key part of a lot of KQM guides, and there are a lot of different ways that they can be used to present information. Here's a few of the different tables we've made in the past for KQM guides that you can use in transcription:</p>
+                <h2 class="subtitle">Rounded Corners Table</h2>
+                <h3 class="block-title">HTML</h3>
+                <code class="code-block">
+                    &lt;table class=&quot;rounded-corners&quot;&gt;<br>
+                    &emsp;&lt;tr&gt;&lt;th&gt;Weapon Name&lt;/th&gt;&lt;th&gt;Damage&lt;/th&gt;&lt;th&gt;Percentage&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;<br>
+                    &emsp;&lt;tr&gt;&lt;td&gt;Weapon A&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                    &emsp;&lt;tr&gt;&lt;td&gt;Weapon B&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                    &emsp;&lt;tr&gt;&lt;td&gt;Weapon C&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                    &lt;/table&gt;
+                </code>
+                <h3 class="block-title">CSS</h3>
+                <code class="code-block">
+                    :root {<br>
+                    &emsp;&emsp;--table-border-width: 2px;<br>
+                    &emsp;&emsp;--primary-color: #29232E;<br>
+                    &emsp;&emsp;--secondary-color: #9858C6;<br>
+                    &emsp;&emsp;--tertiary-color: #302936;<br>
+                    &emsp;&emsp;--quantenary-color: #504b5562;<br>
+                    }<br>
+                    <br>
+                    .rounded-corners {<br>
+                    &emsp;&emsp;border-collapse: separate;<br>
+                    &emsp;&emsp;border-spacing: 0;<br>
+                    &emsp;&emsp;min-width: 30vw;<br>
+                    &emsp;&emsp;color: white;<br>
+                    }<br>
+                    <br>
+                    .rounded-corners tr th,<br>
+                    .rounded-corners tr td {<br>
+                        &emsp;&emsp;border-right: var(--table-border-width) solid var(--primary-color);<br>
+                        &emsp;&emsp;border-bottom: var(--table-border-width) solid var(--primary-color);<br>
+                        &emsp;&emsp;padding: 5px;<br>
+                    }<br>
+                    <br>
+                    .rounded-corners tr th:first-child,<br>
+                    .rounded-corners tr td:first-child {<br>
+                        &emsp;&emsp;border-left: var(--table-border-width) solid var(--primary-color);<br>
+                    }<br>
+                    <br>
+                    .rounded-corners tr th {<br>
+                        &emsp;&emsp;background: var(--tertiary-color);<br>
+                        &emsp;&emsp;border-top: var(--table-border-width) solid var(--primary-color);<br>
+                        &emsp;&emsp;text-align: left;<br>
+                    }<br>
+                    <br>
+                    .rounded-corners tr td {<br>
+                        &emsp;&emsp;background-color: var(--quantenary-color);<br>
+                    }<br>
+                    <br>
+                    .rounded-corners tr:first-child th:first-child {<br>
+                        &emsp;&emsp;border-top-left-radius: 5px;<br>
+                    }<br>
+                    <br>
+                    .rounded-corners tr:first-child th:last-child {<br>
+                        &emsp;&emsp;border-top-right-radius: 5px;<br>
+                    }<br>
+                    <br>
+                    .rounded-corners tr:last-child td:first-child {<br>
+                        &emsp;&emsp;border-bottom-left-radius: 5px;<br>
+                    }<br>
+                    <br>
+                    .rounded-corners tr:last-child td:last-child {<br>
+                        &emsp;&emsp;border-bottom-right-radius: 5px;<br>
+                    }<br>
+                </code>
+                <h3 class="block-title">Result</h3>
+                <div class="css-example-content">
+                    <table class="rounded-corners">
+                        <tr><th>Weapon Name</th><th>Damage</th><th>Percentage</th><th>Description</th></tr>
+                        <tr><td>Weapon A</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                        <tr><td>Weapon B</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                        <tr><td>Weapon C</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -142,6 +145,16 @@
             x.className += " responsive";
         } else {
             x.className = "topnav";
+        }
+    }
+
+    function expandTable() {
+        const content = document.getElementById("expand-table-info");
+        if(getComputedStyle(content).height == "0px") {
+            content.style.height = "100%";
+        }
+        else {
+            content.style.height = "0px";
         }
     }
 </script>
