@@ -358,6 +358,27 @@ body {
     background-color: #fff;
     transition: all 0.3s ease;
 }
+
+@media screen and (max-width: 1200px) {
+    #carousel {
+        border-radius: 0px;
+    }
+
+    #carousel-navigation {
+        margin-left: 0px;
+        height: 400px;
+    }
+
+    [class^="label_"] {
+        margin: 0;
+        border-radius: 0px;
+        height: 25%;
+    }
+
+    [class^="label_"]:not(:last-child) {
+        border-bottom: 1px solid black;
+    }
+}
             
 [class^="label_"]:hover {
     color: #444;
