@@ -139,6 +139,149 @@
             <h2 class="subtitle">Vertical Carousel</h2>
             <p class="paragraph">By Ayzel. Ping if you have any questions.</p>
             <h3 class="block-title">HTML</h3>
+            <code class="code-block">
+                &lt;div id=&quot;carousel-container&quot; style=&quot;margin: 0px;&quot;&gt;
+                <br>&emsp;&lt;input hidden type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;button_a&quot; checked/&gt;
+                <br>&emsp;&lt;input hidden type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;button_b&quot;/&gt;
+                <br>&emsp;&lt;input hidden type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;button_c&quot;/&gt;
+                <br>&emsp;&lt;input hidden type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;button_d&quot;/&gt;
+                <br>&emsp;&lt;div id=&quot;carousel&quot;&gt;
+                <br>&emsp;&emsp;&lt;div class=&quot;p-wrapper&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&lt;section class=&quot;panel_a&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h1&gt;Team 1&lt;/h1&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h2&gt;Name&lt;/h2&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;p&gt;This team is pretty fire not gonna lie. Insert whatever text and images and headings you want in this section.&lt;/p&gt;
+                <br>&emsp;&emsp;&emsp;&lt;/section&gt;
+                <br>&emsp;&emsp;&emsp;&lt;section class=&quot;panel_b&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h1&gt;Team 2&lt;/h1&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h2&gt;Name&lt;/h2&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?&lt;/p&gt;
+                <br>&emsp;&emsp;&emsp;&lt;/section&gt;
+                <br>&emsp;&emsp;&emsp;&lt;section class=&quot;panel_c&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h1&gt;Team 3&lt;/h1&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h2&gt;Name&lt;/h2&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?&lt;/p&gt;
+                <br>&emsp;&emsp;&emsp;&lt;/section&gt;
+                <br>&emsp;&emsp;&emsp;&lt;section class=&quot;panel_d&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h1&gt;Team 4&lt;/h1&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h2&gt;Name&lt;/h2&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?&lt;/p&gt;
+                <br>&emsp;&emsp;&emsp;&lt;/section&gt;
+                <br>&emsp;&emsp;&lt;/div&gt;
+                <br>&emsp;&lt;/div&gt;
+                <br>&emsp;&lt;div id=&quot;carousel-navigation&quot;&gt;
+                <br>&emsp;&emsp;&lt;label for=&quot;button_a&quot; class=&quot;label_a&quot;&gt;&lt;span&gt;Team 1&lt;/span&gt;&lt;/label&gt;
+                <br>&emsp;&emsp;&lt;label for=&quot;button_b&quot; class=&quot;label_b&quot;&gt;&lt;span&gt;Team 2&lt;/span&gt;&lt;/label&gt;
+                <br>&emsp;&emsp;&lt;label for=&quot;button_c&quot; class=&quot;label_c&quot;&gt;&lt;span&gt;Team 3&lt;/span&gt;&lt;/label&gt;
+                <br>&emsp;&emsp;&lt;label for=&quot;button_d&quot; class=&quot;label_d&quot;&gt;&lt;span&gt;Team 4&lt;/span&gt;&lt;/label&gt;
+                <br>&emsp;&lt;/div&gt;
+                <br>&lt;/div&gt;
+            </code>
+            <h3 class="block-title">CSS</h3>
+            <code class="code-block">
+                /* carousel css */
+                <br>#carousel-container {
+                <br>&emsp;&emsp;    display: flex;
+                <br>&emsp;&emsp;    justify-content: center;
+                <br>&emsp;&emsp;    align-items: center;
+                <br>&emsp;&emsp;    min-height: 500px;
+                <br>}
+                <br>
+                <br>#carousel, #carousel-navigation {
+                <br>&emsp;&emsp;    flex: initial;
+                <br>&emsp;&emsp;    display: block;
+                <br>}
+                <br>
+                <br>#carousel h1 {
+                <br>&emsp;&emsp;    font-size: 32px;
+                <br>&emsp;&emsp;    line-height: 42px;
+                <br>}
+                <br>
+                <br>#carousel h2 {
+                <br>&emsp;&emsp;    font-size: 26px;
+                <br>&emsp;&emsp;    line-height: 36px;
+                <br>}
+                <br>
+                <br>#carousel p {
+                <br>&emsp;&emsp;    font-size: 16px;
+                <br>&emsp;&emsp;    line-height: 26px;
+                <br>}
+                <br>
+                <br>#carousel {
+                <br>&emsp;&emsp;    overflow: hidden;
+                <br>&emsp;&emsp;    width: 600px;
+                <br>&emsp;&emsp;    height: 400px;
+                <br>&emsp;&emsp;    border-radius: 4px;
+                <br>&emsp;&emsp;    background-color: #fff;
+                <br>}
+                <br>
+                <br>.p-wrapper {
+                <br>&emsp;&emsp;    position: relative;
+                <br>&emsp;&emsp;    width: 100%;
+                <br>&emsp;&emsp;    height: 100%;
+                <br>&emsp;&emsp;    transition: transform 0.4s ease-in-out;
+                <br>}
+                <br>
+                <br>#button_a:checked ~ #carousel .p-wrapper {
+                <br>&emsp;&emsp;    -webkit-transform: translateY(0);
+                <br>&emsp;&emsp;    transform: translateY(0); 
+                <br>}
+                <br>
+                <br>#button_b:checked ~ #carousel .p-wrapper {
+                <br>&emsp;&emsp;    -webkit-transform: translateY(-100%);
+                <br>&emsp;&emsp;    transform: translateY(-100%); 
+                <br>}
+                <br>
+                <br>#button_c:checked ~ #carousel .p-wrapper {
+                <br>&emsp;&emsp;    -webkit-transform: translateY(-200%);
+                <br>&emsp;&emsp;    transform: translateY(-200%); 
+                <br>}
+                <br>
+                <br>#button_d:checked ~ #carousel .p-wrapper {
+                <br>&emsp;&emsp;    -webkit-transform: translateY(-300%);
+                <br>&emsp;&emsp;    transform: translateY(-300%); 
+                <br>}
+                <br>
+                <br>[class^="panel_"] {
+                <br>&emsp;&emsp;    overflow: auto;
+                <br>&emsp;&emsp;    position: relative;
+                <br>&emsp;&emsp;    width: inherit;
+                <br>&emsp;&emsp;    height: inherit;
+                <br>&emsp;&emsp;    padding: 48px;
+                <br>}
+                <br>
+                <br>#carousel-navigation {
+                <br>&emsp;&emsp;    margin-left: 24px;
+                <br>}
+                <br>
+                <br>[class^="label_"] {
+                <br>&emsp;&emsp;    display: block;
+                <br>&emsp;&emsp;    cursor: pointer;
+                <br>&emsp;&emsp;    margin: 8px 0;
+                <br>&emsp;&emsp;    width: 100px;
+                <br>&emsp;&emsp;    height: 32px;
+                <br>&emsp;&emsp;    line-height: 32px;
+                <br>&emsp;&emsp;    text-align: center;
+                <br>&emsp;&emsp;    border-radius: 4px;
+                <br>&emsp;&emsp;    color: #aaa;
+                <br>&emsp;&emsp;    background-color: #fff;
+                <br>&emsp;&emsp;    transition: all 0.3s ease;
+                <br>}
+                <br>
+                <br>[class^="label_"]:hover {
+                <br>&emsp;&emsp;    color: #444;
+                <br>&emsp;&emsp;    background-color: #ffeed9;
+                <br>}
+                <br>
+                <br>#button_a:checked ~ #carousel-navigation .label_a,
+                <br>#button_b:checked ~ #carousel-navigation .label_b,
+                <br>#button_c:checked ~ #carousel-navigation .label_c,
+                <br>#button_d:checked ~ #carousel-navigation .label_d {
+                <br>&emsp;&emsp;    cursor: default;
+                <br>&emsp;&emsp;    color: #fff;
+                <br>&emsp;&emsp;    background-color: #222;
+                <br>}
+            </code>
             <h3 class="block-title">Result</h3>
             <div id="carousel-container" style="margin: 0px;">
                 <input hidden type="radio" name="carousel-control" id="button_a" checked/>
@@ -212,10 +355,14 @@
         if(getComputedStyle(content).height == "0px") {
             content.style.height = "100%";
             icon.classList.remove("rotate");
+            button.style.borderBottomLeftRadius="0px";
+            button.style.borderBottomRightRadius="0px";
         }
         else {
             content.style.height = "0px";
             icon.classList.add("rotate");
+            button.style.borderBottomLeftRadius="25px";
+            button.style.borderBottomRightRadius="25px";
         }
     }
 </script>

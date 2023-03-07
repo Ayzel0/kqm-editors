@@ -283,6 +283,21 @@ body {
     display: block;
 }
 
+#carousel h1 {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+#carousel h2 {
+    font-size: 26px;
+    line-height: 36px;
+}
+
+#carousel p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
 #carousel {
     overflow: hidden;
     width: 600px;
