@@ -268,6 +268,27 @@
                 <br>&emsp;&emsp;    transition: all 0.3s ease;
                 <br>}
                 <br>
+                <br>@media screen and (max-width: 1200px) {
+                <br>&emsp;&emsp;    #carousel {
+                <br>&emsp;&emsp;&emsp;&emsp;        border-radius: 0px;
+                <br>&emsp;&emsp;    }
+                <br>
+                <br>&emsp;&emsp;    #carousel-navigation {
+                <br>&emsp;&emsp;&emsp;&emsp;        margin-left: 0px;
+                <br>&emsp;&emsp;&emsp;&emsp;        height: 400px;
+                <br>&emsp;&emsp;    }
+                <br>
+                <br>&emsp;&emsp;    [class^="label_"] {
+                <br>&emsp;&emsp;&emsp;&emsp;        margin: 0;
+                <br>&emsp;&emsp;&emsp;&emsp;        border-radius: 0px;
+                <br>&emsp;&emsp;&emsp;&emsp;        height: 25%;
+                <br>&emsp;&emsp;    }
+                <br>
+                <br>&emsp;&emsp;    [class^="label_"]:not(:last-child) {
+                <br>&emsp;&emsp;&emsp;&emsp;        border-bottom: 1px solid black;
+                <br>&emsp;&emsp;    }
+                <br>}
+                <br>
                 <br>[class^="label_"]:hover {
                 <br>&emsp;&emsp;    color: #444;
                 <br>&emsp;&emsp;    background-color: #ffeed9;
