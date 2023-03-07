@@ -52,85 +52,128 @@
         </div>
     </div>
 
-    <div class="column">
-        <div class="col-width">
-            <h1 class="title">KQM CSS Resources</h1>
-            <button onclick = "expandTable()" id="expand-table-button"><i class="fa fa-caret-down rotatable-icon"></i>&ensp;Tables</button>
-            <div id="expand-table-info">
-                <p class="paragraph">Tables are a key part of a lot of KQM guides, and there are a lot of different ways that they can be used to present information. Here's a few of the different tables we've made in the past for KQM guides that you can use in transcription:</p>
-                <h2 class="subtitle">Rounded Corners Table</h2>
-                <h3 class="block-title">HTML</h3>
-                <code class="code-block">
-                    &lt;table class=&quot;rounded-corners&quot;&gt;<br>
-                    &emsp;&lt;tr&gt;&lt;th&gt;Weapon Name&lt;/th&gt;&lt;th&gt;Damage&lt;/th&gt;&lt;th&gt;Percentage&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;<br>
-                    &emsp;&lt;tr&gt;&lt;td&gt;Weapon A&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
-                    &emsp;&lt;tr&gt;&lt;td&gt;Weapon B&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
-                    &emsp;&lt;tr&gt;&lt;td&gt;Weapon C&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
-                    &lt;/table&gt;
-                </code>
-                <h3 class="block-title">CSS</h3>
-                <code class="code-block">
-                    :root {<br>
-                    &emsp;&emsp;--table-border-width: 2px;<br>
-                    &emsp;&emsp;--primary-color: #29232E;<br>
-                    &emsp;&emsp;--secondary-color: #9858C6;<br>
-                    &emsp;&emsp;--tertiary-color: #302936;<br>
-                    &emsp;&emsp;--quantenary-color: #504b5562;<br>
-                    }<br>
-                    <br>
-                    .rounded-corners {<br>
-                    &emsp;&emsp;border-collapse: separate;<br>
-                    &emsp;&emsp;border-spacing: 0;<br>
-                    &emsp;&emsp;min-width: 30vw;<br>
-                    &emsp;&emsp;color: white;<br>
-                    }<br>
-                    <br>
-                    .rounded-corners tr th,<br>
-                    .rounded-corners tr td {<br>
-                        &emsp;&emsp;border-right: var(--table-border-width) solid var(--primary-color);<br>
-                        &emsp;&emsp;border-bottom: var(--table-border-width) solid var(--primary-color);<br>
-                        &emsp;&emsp;padding: 5px;<br>
-                    }<br>
-                    <br>
-                    .rounded-corners tr th:first-child,<br>
-                    .rounded-corners tr td:first-child {<br>
-                        &emsp;&emsp;border-left: var(--table-border-width) solid var(--primary-color);<br>
-                    }<br>
-                    <br>
-                    .rounded-corners tr th {<br>
-                        &emsp;&emsp;background: var(--tertiary-color);<br>
-                        &emsp;&emsp;border-top: var(--table-border-width) solid var(--primary-color);<br>
-                        &emsp;&emsp;text-align: left;<br>
-                    }<br>
-                    <br>
-                    .rounded-corners tr td {<br>
-                        &emsp;&emsp;background-color: var(--quantenary-color);<br>
-                    }<br>
-                    <br>
-                    .rounded-corners tr:first-child th:first-child {<br>
-                        &emsp;&emsp;border-top-left-radius: 5px;<br>
-                    }<br>
-                    <br>
-                    .rounded-corners tr:first-child th:last-child {<br>
-                        &emsp;&emsp;border-top-right-radius: 5px;<br>
-                    }<br>
-                    <br>
-                    .rounded-corners tr:last-child td:first-child {<br>
-                        &emsp;&emsp;border-bottom-left-radius: 5px;<br>
-                    }<br>
-                    <br>
-                    .rounded-corners tr:last-child td:last-child {<br>
-                        &emsp;&emsp;border-bottom-right-radius: 5px;<br>
-                    }<br>
-                </code>
-                <h3 class="block-title">Result</h3>
-                <div class="css-example-content">
-                    <table class="rounded-corners">
-                        <tr><th>Weapon Name</th><th>Damage</th><th>Percentage</th><th>Description</th></tr>
-                        <tr><td>Weapon A</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
-                        <tr><td>Weapon B</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
-                        <tr><td>Weapon C</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
-                    </table>
+    <div class="content-toggle-container">
+        <h1 class="title">KQM CSS Resources</h1>
+        <button onclick = "expandTable()" class="expand-button" id="expand-table-button"><i id="expand-table-icon" class="fa fa-caret-down rotatable-icon rotate"></i>&ensp;Tables</button>
+        <div id="expand-table-info">
+            <p class="paragraph">Tables are a key part of a lot of KQM guides, and there are a lot of different ways that they can be used to present information. Here's a few of the different tables we've made in the past for KQM guides that you can use in transcription:</p>
+            <h2 class="subtitle">Rounded Corners Table</h2>
+            <p class="paragraph">By Ayzel. Ping for questions or if you want any modificaations.</p>
+            <h3 class="block-title">HTML</h3>
+            <code class="code-block">
+                &lt;table class=&quot;rounded-corners&quot;&gt;<br>
+                &emsp;&lt;tr&gt;&lt;th&gt;Weapon Name&lt;/th&gt;&lt;th&gt;Damage&lt;/th&gt;&lt;th&gt;Percentage&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;&lt;td&gt;Weapon A&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;&lt;td&gt;Weapon B&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;&lt;td&gt;Weapon C&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </code>
+            <h3 class="block-title">CSS</h3>
+            <code class="code-block">
+                :root {<br>
+                &emsp;&emsp;--table-border-width: 2px;<br>
+                &emsp;&emsp;--primary-color: #29232E;<br>
+                &emsp;&emsp;--secondary-color: #9858C6;<br>
+                &emsp;&emsp;--tertiary-color: #302936;<br>
+                &emsp;&emsp;--quantenary-color: #504b5562;<br>
+                }<br>
+                <br>
+                .rounded-corners {<br>
+                &emsp;&emsp;border-collapse: separate;<br>
+                &emsp;&emsp;border-spacing: 0;<br>
+                &emsp;&emsp;min-width: 30vw;<br>
+                &emsp;&emsp;color: white;<br>
+                }<br>
+                <br>
+                .rounded-corners tr th,<br>
+                .rounded-corners tr td {<br>
+                    &emsp;&emsp;border-right: var(--table-border-width) solid var(--primary-color);<br>
+                    &emsp;&emsp;border-bottom: var(--table-border-width) solid var(--primary-color);<br>
+                    &emsp;&emsp;padding: 5px;<br>
+                }<br>
+                <br>
+                .rounded-corners tr th:first-child,<br>
+                .rounded-corners tr td:first-child {<br>
+                    &emsp;&emsp;border-left: var(--table-border-width) solid var(--primary-color);<br>
+                }<br>
+                <br>
+                .rounded-corners tr th {<br>
+                    &emsp;&emsp;background: var(--tertiary-color);<br>
+                    &emsp;&emsp;border-top: var(--table-border-width) solid var(--primary-color);<br>
+                    &emsp;&emsp;text-align: left;<br>
+                }<br>
+                <br>
+                .rounded-corners tr td {<br>
+                    &emsp;&emsp;background-color: var(--quantenary-color);<br>
+                }<br>
+                <br>
+                .rounded-corners tr:first-child th:first-child {<br>
+                    &emsp;&emsp;border-top-left-radius: 5px;<br>
+                }<br>
+                <br>
+                .rounded-corners tr:first-child th:last-child {<br>
+                    &emsp;&emsp;border-top-right-radius: 5px;<br>
+                }<br>
+                <br>
+                .rounded-corners tr:last-child td:first-child {<br>
+                    &emsp;&emsp;border-bottom-left-radius: 5px;<br>
+                }<br>
+                <br>
+                .rounded-corners tr:last-child td:last-child {<br>
+                    &emsp;&emsp;border-bottom-right-radius: 5px;<br>
+                }<br>
+            </code>
+            <h3 class="block-title">Result</h3>
+            <div class="css-example-content">
+                <table class="rounded-corners">
+                    <tr><th>Weapon Name</th><th>Damage</th><th>Percentage</th><th>Description</th></tr>
+                    <tr><td>Weapon A</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                    <tr><td>Weapon B</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                    <tr><td>Weapon C</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                </table>
+            </div>
+        </div>
+        <button onclick="expandCarousel()" class="expand-button" id="expand-carousel-button"><i id="expand-carousel-icon" class="fa fa-caret-down rotatable-icon rotate"></i>&ensp;Carousels</button>
+        <div id="expand-carousel-info">
+            <p class="paragraph">Carousels are a cool way to display things like teams. Carousels can be modified in many ways, although creating carousels in pure HTML/CSS is pretty difficult. I've provided an example carousel below for use. Note that if you want to use the carousels in this section, you will have to either a] contact me (Ayzel) or b] be familiar with how to use custom HTML blocks, as this carousel is entirely custom HTML - no Wordpress blocks used.</p>
+            <h2 class="subtitle">Vertical Carousel</h2>
+            <p class="paragraph">By Ayzel. Ping if you have any questions.</p>
+            <h3 class="block-title">HTML</h3>
+            <h3 class="block-title">Result</h3>
+            <div id="carousel-container" style="margin: 0px;">
+                <input hidden type="radio" name="carousel-control" id="button_a" checked/>
+                <input hidden type="radio" name="carousel-control" id="button_b"/>
+                <input hidden type="radio" name="carousel-control" id="button_c"/>
+                <input hidden type="radio" name="carousel-control" id="button_d"/>
+                <div id="carousel">
+                    <div class="p-wrapper">
+                        <section class="panel_a">
+                            <h1>Team 1</h1>
+                            <h2>Name</h2>
+                            <p>This team is pretty fire not gonna lie. Insert whatever text and images and headings you want in this section.</p>
+                        </section>
+                        <section class="panel_b">
+                            <h1>Team 2</h1>
+                            <h2>Name</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?</p>
+                        </section>
+                        <section class="panel_c">
+                            <h1>Team 3</h1>
+                            <h2>Name</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?</p>
+                        </section>
+                        <section class="panel_d">
+                            <h1>Team 4</h1>
+                            <h2>Name</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?</p>
+                        </section>
+                    </div>
+                </div>
+                <div id="carousel-navigation">
+                    <label for="button_a" class="label_a"><span>Team 1</span></label>
+                    <label for="button_b" class="label_b"><span>Team 2</span></label>
+                    <label for="button_c" class="label_c"><span>Team 3</span></label>
+                    <label for="button_d" class="label_d"><span>Team 4</span></label>
                 </div>
             </div>
         </div>
@@ -150,16 +193,29 @@
 
     function expandTable() {
         const content = document.getElementById("expand-table-info");
-        const button = document.getElementById("expand-table-button")
+        const button = document.getElementById("expand-table-button");
+        const icon = document.getElementById("expand-table-icon");
         if(getComputedStyle(content).height == "0px") {
             content.style.height = "100%";
-            button.style.borderBottomLeftRadius = "0px";
-            button.style.borderBottomRightRadius = "0px";
+            icon.classList.remove("rotate");
         }
         else {
             content.style.height = "0px";
-            button.style.borderBottomLeftRadius = "25px";
-            button.style.borderBottomRightRadius = "25px";
+            icon.classList.add("rotate");
+        }
+    }
+
+    function expandCarousel() {
+        const content = document.getElementById("expand-carousel-info");
+        const button = document.getElementById("expand-carousel-button");
+        const icon = document.getElementById("expand-carousel-icon");
+        if(getComputedStyle(content).height == "0px") {
+            content.style.height = "100%";
+            icon.classList.remove("rotate");
+        }
+        else {
+            content.style.height = "0px";
+            icon.classList.add("rotate");
         }
     }
 </script>
