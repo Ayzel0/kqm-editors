@@ -133,6 +133,54 @@
                 </table>
             </div>
         </div>
+        <button onclick="expandImage()" class="expand-button" id="expand-image-button"><i id="expand-image-icon" class="fa fa-caret-down rotatable-icon rotate"></i>&ensp;Images</button>
+        <div id="expand-image-info">
+            <p class="paragraph">KQM uses images in basically all guides, and we make sure to properly credit artists. Here's some quick CSS that allows you to put artist credits in the bottom corner of an image.</p>
+            <h2 class="subtitle">Lati Images</h2>
+            <p class="paragraph">By Lati. Ping if you have questions.</p>
+            <p class="paragraph"><strong>Instructions:</strong> Just apply the CSS class to an image. Put the Artist credits into the caption (in Wordpress). It should work automatically. Use either [lati-image] or [lati-image-left] (for the left side), not both at the same time.</p>
+            <h3 class="block-title">CSS</h3>
+            <code class="code-block">
+                /* Artist Images */
+                <br>.lati-image img, .lati-image-left img {
+                <br>&emsp;&emsp;    border-radius: 25px;
+                <br>&emsp;&emsp;    width: 100%;
+                <br>}
+                <br>
+                <br>.lati-image figcaption, .lati-image-left figcaption {
+                <br>&emsp;&emsp;    padding: 5px 20px 5px 20px;
+                <br>&emsp;&emsp;    background-color: #000000;
+                <br>&emsp;&emsp;    top: -36px;
+                <br>&emsp;&emsp;    display: inline-block;
+                <br>&emsp;&emsp;    position: relative;
+                <br>}
+                <br>
+                <br>.lati-image figcaption {
+                <br>&emsp;&emsp;    border-radius: 20px 0px 18px 0px;
+                <br>&emsp;&emsp;    float: right;
+                <br>}
+                <br>
+                <br>.lati-image-left figcaption {
+                <br>&emsp;&emsp;    border-radius: 0px 20px 0px 18px;
+                <br>&emsp;&emsp;    float: left;
+                <br>}
+            </code>
+            <h3 class="block-title">Result</h3>
+            <div style="display: flex; justify-content: center;">
+                <div class="lati-image-left" style="width: 250px; margin: 0px 25px;">
+                    <figure>
+                        <img src="../kqm icon.png">
+                        <figcaption style="color:white;  display: table-caption; caption-side: bottom;">Hi.</figcaption>
+                    </figure>
+                </div>
+                <div class="lati-image" style="width: 250px; margin: 0px 25px;">
+                    <figure>
+                        <img src="../kqm icon.png">
+                        <figcaption style="color:white;  display: table-caption; caption-side: bottom;">Hi.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
         <button onclick="expandCarousel()" class="expand-button" id="expand-carousel-button"><i id="expand-carousel-icon" class="fa fa-caret-down rotatable-icon rotate"></i>&ensp;Carousels</button>
         <div id="expand-carousel-info">
             <p class="paragraph">Carousels are a cool way to display things like teams. Carousels can be modified in many ways, although creating carousels in pure HTML/CSS is pretty difficult. I've provided an example carousel below for use. Note that if you want to use the carousels in this section, you will have to either a] contact me (Ayzel) or b] be familiar with how to use custom HTML blocks, as this carousel is entirely custom HTML - no Wordpress blocks used.</p>
@@ -371,6 +419,20 @@
         }
     }
 
+    function expandImage() {
+        const content = document.getElementById("expand-image-info");
+        const button = document.getElementById("expand-image-button");
+        const icon = document.getElementById("expand-image-icon");
+        if(getComputedStyle(content).height == "0px") {
+            content.style.height = "100%";
+            icon.classList.remove("rotate");
+        }
+        else {
+            content.style.height = "0px";
+            icon.classList.add("rotate");
+        }
+    }
+
     function expandCarousel() {
         const content = document.getElementById("expand-carousel-info");
         const button = document.getElementById("expand-carousel-button");
@@ -386,11 +448,9 @@
         else {
             content.style.height = "0px";
             icon.classList.add("rotate");
-            button.style.borderBottomLeftRadius="25px";
-            button.style.borderBottomRightRadius="25px";
             if(sWidth > 1200) {
-                button.style.borderBottomLeftRadius="0px";
-                button.style.borderBottomRightRadius="0px";
+                button.style.borderBottomLeftRadius="25px";
+                button.style.borderBottomRightRadius="25px";
             }
         }
     }

@@ -285,6 +285,11 @@ body {
     overflow: hidden;
 }
 
+#expand-image-info {
+    height: 0;
+    overflow: hidden;
+}
+
 .rotatable-icon {
     transition: all 0.25s ease-in-out;
 }
@@ -418,4 +423,30 @@ body {
      cursor: default;
      color: #fff;
      background-color: #222;
+}
+
+/* Artist Images */
+.lati-image img, .lati-image-left img {
+    border-radius: 25px;
+    width: 100%;
+}
+  
+.lati-image figcaption, .lati-image-left figcaption {
+    padding: 5px 20px 5px 20px;
+    background-color: #000000;
+    top: -36px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-size: 19.5px;
+}
+  
+.lati-image figcaption {
+    border-radius: 20px 0px 18px 0px;
+    float: right;
+}
+  
+.lati-image-left figcaption {
+    border-radius: 0px 20px 0px 18px;
+    float: left;
 }
