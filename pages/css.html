@@ -346,6 +346,8 @@
 <script src="../scripts/scroll-animation.js"></script>
 <script src="../scripts/css.js"></script>
 <script>
+    let sWidth = screen.width;
+
     function hamburgerMenu() {
         const x = document.getElementById("responsiveNav");
         if (x.className === "topnav") {
@@ -376,14 +378,20 @@
         if(getComputedStyle(content).height == "0px") {
             content.style.height = "100%";
             icon.classList.remove("rotate");
-            button.style.borderBottomLeftRadius="0px";
-            button.style.borderBottomRightRadius="0px";
+            if(sWidth > 1200) {
+                button.style.borderBottomLeftRadius="0px";
+                button.style.borderBottomRightRadius="0px";
+            }
         }
         else {
             content.style.height = "0px";
             icon.classList.add("rotate");
             button.style.borderBottomLeftRadius="25px";
             button.style.borderBottomRightRadius="25px";
+            if(sWidth > 1200) {
+                button.style.borderBottomLeftRadius="0px";
+                button.style.borderBottomRightRadius="0px";
+            }
         }
     }
 </script>

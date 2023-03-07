@@ -96,6 +96,16 @@ body {
     border-radius: 25px 25px 0px 0px;
 }
 
+@media screen and (max-width: 1200px) {
+    .col-width .title {
+        border-radius: 0px;
+    }
+
+    .col-width {
+        border-radius: 0px;
+    }
+}
+
 .col-width .subtitle {
     font-size: 26px;
     padding: 14px 28px;
@@ -124,6 +134,7 @@ body {
 @media screen and (max-width: 1200px) {
     .content-toggle-container {
         margin: 50px 0px;
+        border-radius: 0px;
     }
 }
 
@@ -134,6 +145,12 @@ body {
     background: #937099;
     text-align: center;
     border-radius: 25px 25px 0px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .content-toggle-container .title {
+        border-radius: 0px;
+    }
 }
 
 .content-toggle-container .subtitle {
@@ -250,6 +267,12 @@ body {
 #expand-carousel-button {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+    #expand-carousel-button {
+        border-radius: 0px;
+    }
 }
 
 #expand-table-info {
