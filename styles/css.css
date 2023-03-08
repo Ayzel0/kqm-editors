@@ -434,11 +434,14 @@ body {
 .lati-image figcaption, .lati-image-left figcaption {
     padding: 5px 20px 5px 20px;
     background-color: #000000;
-    top: -35px;
+    top: -36px;
     display: inline-block;
     position: relative;
     z-index: 1;
-    font-size: 19.5px;
+    font-size: 13px;
+    margin-top: 0.575em;
+    margin-bottom: 1em;
+    padding: 5px 20px;
 }
   
 .lati-image figcaption {
