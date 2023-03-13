@@ -7,11 +7,11 @@
     <link href="../styles/topnav.css" rel="stylesheet">
     <link href="../styles/css.css" rel="stylesheet">
     <link href="../styles/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body id="dark-theme">
     <div class="topbar">
-        <img class="kqmlogo" src="../kqm icon.png">
         <div class="title">
             <h1>KQM Editor Resources</h1>
         </div>
@@ -31,32 +31,428 @@
         <a href="request.html">Request</a>
         <a style="font-size:15px;" class="icon" onclick="hamburgerMenu()">&#9776;</a>
     </div>
+    <!--
     <div class="column">
-        <div style="width: 80%">
-            <h1 class="title-bubble">Learning CSS</h1>
+        <div class="col-width">
+            <h1 class="title">Learning CSS</h1>
             <div class="bubble-grid">
                 <div class="flex-grid-container">
-                    <a class="expanding-bubble" href="https://www.theodinproject.com/dashboard">The Odin Project</a>
-                    <p>ASDFASDFASDFASDFASDF HI</p>
+                    <a class="expanding-bubble" href="https://www.theodinproject.com/dashboard">Odin Project</a>
+                    <p class="text-by-bubble">Good intro website. Has a lot of free resources.</p>
                 </div>
                 <div class="flex-grid-container">
                     <a class="expanding-bubble" href="https://scrimba.com/learn/htmlandcss">Scrimba</a>
+                    <p class="text-by-bubble">Allows you to follow lessons in a code editor.</p>
                 </div>
                 <div class="flex-grid-container">
                     <a class="expanding-bubble" href="https://web.dev/learn/css/">web.dev</a>
+                    <p class="text-by-bubble">Website by Chrome. Has a lot of resources.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <div class="content-toggle-container">
+        <h1 class="title">KQM CSS Resources</h1>
+        <button onclick = "expandTable()" class="expand-button" id="expand-table-button"><i id="expand-table-icon" class="fa fa-caret-down rotatable-icon rotate"></i>&ensp;Tables</button>
+        <div id="expand-table-info">
+            <p class="paragraph">Tables are a key part of a lot of KQM guides, and there are a lot of different ways that they can be used to present information. Here's a few of the different tables we've made in the past for KQM guides that you can use in transcription:</p>
+            <h2 class="subtitle">Rounded Corners Table</h2>
+            <p class="paragraph">By Ayzel. Ping for questions or if you want any modificaations.</p>
+            <h3 class="block-title">HTML</h3>
+            <code class="code-block">
+                &lt;table class=&quot;rounded-corners&quot;&gt;<br>
+                &emsp;&lt;tr&gt;&lt;th&gt;Weapon Name&lt;/th&gt;&lt;th&gt;Damage&lt;/th&gt;&lt;th&gt;Percentage&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;&lt;td&gt;Weapon A&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;&lt;td&gt;Weapon B&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;&lt;td&gt;Weapon C&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;This is a weapon&lt;/td&gt;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </code>
+            <h3 class="block-title">CSS</h3>
+            <code class="code-block">
+                :root {<br>
+                &emsp;&emsp;--table-border-width: 2px;<br>
+                &emsp;&emsp;--primary-color: #29232E;<br>
+                &emsp;&emsp;--secondary-color: #9858C6;<br>
+                &emsp;&emsp;--tertiary-color: #302936;<br>
+                &emsp;&emsp;--quantenary-color: #504b5562;<br>
+                }<br>
+                <br>
+                .rounded-corners {<br>
+                &emsp;&emsp;border-collapse: separate;<br>
+                &emsp;&emsp;border-spacing: 0;<br>
+                &emsp;&emsp;min-width: 30vw;<br>
+                &emsp;&emsp;color: white;<br>
+                }<br>
+                <br>
+                .rounded-corners tr th,<br>
+                .rounded-corners tr td {<br>
+                    &emsp;&emsp;border-right: var(--table-border-width) solid var(--primary-color);<br>
+                    &emsp;&emsp;border-bottom: var(--table-border-width) solid var(--primary-color);<br>
+                    &emsp;&emsp;padding: 5px;<br>
+                }<br>
+                <br>
+                .rounded-corners tr th:first-child,<br>
+                .rounded-corners tr td:first-child {<br>
+                    &emsp;&emsp;border-left: var(--table-border-width) solid var(--primary-color);<br>
+                }<br>
+                <br>
+                .rounded-corners tr th {<br>
+                    &emsp;&emsp;background: var(--tertiary-color);<br>
+                    &emsp;&emsp;border-top: var(--table-border-width) solid var(--primary-color);<br>
+                    &emsp;&emsp;text-align: left;<br>
+                }<br>
+                <br>
+                .rounded-corners tr td {<br>
+                    &emsp;&emsp;background-color: var(--quantenary-color);<br>
+                }<br>
+                <br>
+                .rounded-corners tr:first-child th:first-child {<br>
+                    &emsp;&emsp;border-top-left-radius: 5px;<br>
+                }<br>
+                <br>
+                .rounded-corners tr:first-child th:last-child {<br>
+                    &emsp;&emsp;border-top-right-radius: 5px;<br>
+                }<br>
+                <br>
+                .rounded-corners tr:last-child td:first-child {<br>
+                    &emsp;&emsp;border-bottom-left-radius: 5px;<br>
+                }<br>
+                <br>
+                .rounded-corners tr:last-child td:last-child {<br>
+                    &emsp;&emsp;border-bottom-right-radius: 5px;<br>
+                }<br>
+            </code>
+            <h3 class="block-title">Result</h3>
+            <div class="css-example-content">
+                <table class="rounded-corners">
+                    <tr><th>Weapon Name</th><th>Damage</th><th>Percentage</th><th>Description</th></tr>
+                    <tr><td>Weapon A</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                    <tr><td>Weapon B</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                    <tr><td>Weapon C</td><td>50000</td><td>100%</td><td>This is a weapon</td></tr>
+                </table>
+            </div>
+        </div>
+        <button onclick="expandImage()" class="expand-button" id="expand-image-button"><i id="expand-image-icon" class="fa fa-caret-down rotatable-icon rotate"></i>&ensp;Images</button>
+        <div id="expand-image-info">
+            <p class="paragraph">KQM uses images in basically all guides, and we make sure to properly credit artists. Here's some quick CSS that allows you to put artist credits in the bottom corner of an image.</p>
+            <h2 class="subtitle">Lati Images</h2>
+            <p class="paragraph">By Lati. Ping if you have questions.</p>
+            <p class="paragraph"><strong>Instructions:</strong> Just apply the CSS class to an image. Put the Artist credits into the caption (in Wordpress). It should work automatically. Use either [lati-image] or [lati-image-left] (for the left side), not both at the same time.</p>
+            <h3 class="block-title">CSS</h3>
+            <code class="code-block">
+                /* Artist Images */
+                <br>.lati-image img, .lati-image-left img {
+                <br>&emsp;&emsp;    border-radius: 25px;
+                <br>&emsp;&emsp;    width: 100%;
+                <br>}
+                <br>
+                <br>.lati-image figcaption, .lati-image-left figcaption {
+                <br>&emsp;&emsp;    padding: 5px 20px 5px 20px;
+                <br>&emsp;&emsp;    background-color: #000000;
+                <br>&emsp;&emsp;    top: -36px;
+                <br>&emsp;&emsp;    display: inline-block;
+                <br>&emsp;&emsp;    position: relative;
+                <br>}
+                <br>
+                <br>.lati-image figcaption {
+                <br>&emsp;&emsp;    border-radius: 20px 0px 18px 0px;
+                <br>&emsp;&emsp;    float: right;
+                <br>}
+                <br>
+                <br>.lati-image-left figcaption {
+                <br>&emsp;&emsp;    border-radius: 0px 20px 0px 18px;
+                <br>&emsp;&emsp;    float: left;
+                <br>}
+            </code>
+            <h3 class="block-title">Result</h3>
+            <div style="display: flex; justify-content: center;">
+                <div class="lati-image-left" style="width: 250px; margin: 0px 25px;">
+                    <figure>
+                        <img src="../kqm icon.png">
+                        <figcaption style="color:white;  display: table-caption; caption-side: bottom;">Hi.</figcaption>
+                    </figure>
+                </div>
+                <div class="lati-image" style="width: 250px; margin: 0px 25px;">
+                    <figure>
+                        <img src="../kqm icon.png">
+                        <figcaption style="color:white;  display: table-caption; caption-side: bottom;">Hi.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <button onclick="expandCarousel()" class="expand-button" id="expand-carousel-button"><i id="expand-carousel-icon" class="fa fa-caret-down rotatable-icon rotate"></i>&ensp;Carousels</button>
+        <div id="expand-carousel-info">
+            <p class="paragraph">Carousels are a cool way to display things like teams. Carousels can be modified in many ways, although creating carousels in pure HTML/CSS is pretty difficult. I've provided an example carousel below for use. Note that if you want to use the carousels in this section, you will have to either a] contact me (Ayzel) or b] be familiar with how to use custom HTML blocks, as this carousel is entirely custom HTML - no Wordpress blocks used.</p>
+            <h2 class="subtitle">Vertical Carousel</h2>
+            <p class="paragraph">By Ayzel. Ping if you have any questions.</p>
+            <h3 class="block-title">HTML</h3>
+            <code class="code-block">
+                &lt;div id=&quot;carousel-container&quot; style=&quot;margin: 0px;&quot;&gt;
+                <br>&emsp;&lt;input hidden type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;button_a&quot; checked/&gt;
+                <br>&emsp;&lt;input hidden type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;button_b&quot;/&gt;
+                <br>&emsp;&lt;input hidden type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;button_c&quot;/&gt;
+                <br>&emsp;&lt;input hidden type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;button_d&quot;/&gt;
+                <br>&emsp;&lt;div id=&quot;carousel&quot;&gt;
+                <br>&emsp;&emsp;&lt;div class=&quot;p-wrapper&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&lt;section class=&quot;panel_a&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h1&gt;Team 1&lt;/h1&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h2&gt;Name&lt;/h2&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;p&gt;This team is pretty fire not gonna lie. Insert whatever text and images and headings you want in this section.&lt;/p&gt;
+                <br>&emsp;&emsp;&emsp;&lt;/section&gt;
+                <br>&emsp;&emsp;&emsp;&lt;section class=&quot;panel_b&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h1&gt;Team 2&lt;/h1&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h2&gt;Name&lt;/h2&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?&lt;/p&gt;
+                <br>&emsp;&emsp;&emsp;&lt;/section&gt;
+                <br>&emsp;&emsp;&emsp;&lt;section class=&quot;panel_c&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h1&gt;Team 3&lt;/h1&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h2&gt;Name&lt;/h2&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?&lt;/p&gt;
+                <br>&emsp;&emsp;&emsp;&lt;/section&gt;
+                <br>&emsp;&emsp;&emsp;&lt;section class=&quot;panel_d&quot;&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h1&gt;Team 4&lt;/h1&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;h2&gt;Name&lt;/h2&gt;
+                <br>&emsp;&emsp;&emsp;&emsp;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?&lt;/p&gt;
+                <br>&emsp;&emsp;&emsp;&lt;/section&gt;
+                <br>&emsp;&emsp;&lt;/div&gt;
+                <br>&emsp;&lt;/div&gt;
+                <br>&emsp;&lt;div id=&quot;carousel-navigation&quot;&gt;
+                <br>&emsp;&emsp;&lt;label for=&quot;button_a&quot; class=&quot;label_a&quot;&gt;&lt;span&gt;Team 1&lt;/span&gt;&lt;/label&gt;
+                <br>&emsp;&emsp;&lt;label for=&quot;button_b&quot; class=&quot;label_b&quot;&gt;&lt;span&gt;Team 2&lt;/span&gt;&lt;/label&gt;
+                <br>&emsp;&emsp;&lt;label for=&quot;button_c&quot; class=&quot;label_c&quot;&gt;&lt;span&gt;Team 3&lt;/span&gt;&lt;/label&gt;
+                <br>&emsp;&emsp;&lt;label for=&quot;button_d&quot; class=&quot;label_d&quot;&gt;&lt;span&gt;Team 4&lt;/span&gt;&lt;/label&gt;
+                <br>&emsp;&lt;/div&gt;
+                <br>&lt;/div&gt;
+            </code>
+            <h3 class="block-title">CSS</h3>
+            <code class="code-block">
+                /* carousel css */
+                <br>#carousel-container {
+                <br>&emsp;&emsp;    display: flex;
+                <br>&emsp;&emsp;    justify-content: center;
+                <br>&emsp;&emsp;    align-items: center;
+                <br>&emsp;&emsp;    min-height: 500px;
+                <br>}
+                <br>
+                <br>#carousel, #carousel-navigation {
+                <br>&emsp;&emsp;    flex: initial;
+                <br>&emsp;&emsp;    display: block;
+                <br>}
+                <br>
+                <br>#carousel h1 {
+                <br>&emsp;&emsp;    font-size: 32px;
+                <br>&emsp;&emsp;    line-height: 42px;
+                <br>}
+                <br>
+                <br>#carousel h2 {
+                <br>&emsp;&emsp;    font-size: 26px;
+                <br>&emsp;&emsp;    line-height: 36px;
+                <br>}
+                <br>
+                <br>#carousel p {
+                <br>&emsp;&emsp;    font-size: 16px;
+                <br>&emsp;&emsp;    line-height: 26px;
+                <br>}
+                <br>
+                <br>#carousel {
+                <br>&emsp;&emsp;    overflow: hidden;
+                <br>&emsp;&emsp;    width: 600px;
+                <br>&emsp;&emsp;    height: 400px;
+                <br>&emsp;&emsp;    border-radius: 4px;
+                <br>&emsp;&emsp;    background-color: #fff;
+                <br>}
+                <br>
+                <br>.p-wrapper {
+                <br>&emsp;&emsp;    position: relative;
+                <br>&emsp;&emsp;    width: 100%;
+                <br>&emsp;&emsp;    height: 100%;
+                <br>&emsp;&emsp;    transition: transform 0.4s ease-in-out;
+                <br>}
+                <br>
+                <br>#button_a:checked ~ #carousel .p-wrapper {
+                <br>&emsp;&emsp;    -webkit-transform: translateY(0);
+                <br>&emsp;&emsp;    transform: translateY(0); 
+                <br>}
+                <br>
+                <br>#button_b:checked ~ #carousel .p-wrapper {
+                <br>&emsp;&emsp;    -webkit-transform: translateY(-100%);
+                <br>&emsp;&emsp;    transform: translateY(-100%); 
+                <br>}
+                <br>
+                <br>#button_c:checked ~ #carousel .p-wrapper {
+                <br>&emsp;&emsp;    -webkit-transform: translateY(-200%);
+                <br>&emsp;&emsp;    transform: translateY(-200%); 
+                <br>}
+                <br>
+                <br>#button_d:checked ~ #carousel .p-wrapper {
+                <br>&emsp;&emsp;    -webkit-transform: translateY(-300%);
+                <br>&emsp;&emsp;    transform: translateY(-300%); 
+                <br>}
+                <br>
+                <br>[class^="panel_"] {
+                <br>&emsp;&emsp;    overflow: auto;
+                <br>&emsp;&emsp;    position: relative;
+                <br>&emsp;&emsp;    width: inherit;
+                <br>&emsp;&emsp;    height: inherit;
+                <br>&emsp;&emsp;    padding: 48px;
+                <br>}
+                <br>
+                <br>#carousel-navigation {
+                <br>&emsp;&emsp;    margin-left: 24px;
+                <br>}
+                <br>
+                <br>[class^="label_"] {
+                <br>&emsp;&emsp;    display: block;
+                <br>&emsp;&emsp;    cursor: pointer;
+                <br>&emsp;&emsp;    margin: 8px 0;
+                <br>&emsp;&emsp;    width: 100px;
+                <br>&emsp;&emsp;    height: 32px;
+                <br>&emsp;&emsp;    line-height: 32px;
+                <br>&emsp;&emsp;    text-align: center;
+                <br>&emsp;&emsp;    border-radius: 4px;
+                <br>&emsp;&emsp;    color: #aaa;
+                <br>&emsp;&emsp;    background-color: #fff;
+                <br>&emsp;&emsp;    transition: all 0.3s ease;
+                <br>}
+                <br>
+                <br>@media screen and (max-width: 1200px) {
+                <br>&emsp;&emsp;    #carousel {
+                <br>&emsp;&emsp;&emsp;&emsp;        border-radius: 0px;
+                <br>&emsp;&emsp;    }
+                <br>
+                <br>&emsp;&emsp;    #carousel-navigation {
+                <br>&emsp;&emsp;&emsp;&emsp;        margin-left: 0px;
+                <br>&emsp;&emsp;&emsp;&emsp;        height: 400px;
+                <br>&emsp;&emsp;    }
+                <br>
+                <br>&emsp;&emsp;    [class^="label_"] {
+                <br>&emsp;&emsp;&emsp;&emsp;        margin: 0;
+                <br>&emsp;&emsp;&emsp;&emsp;        border-radius: 0px;
+                <br>&emsp;&emsp;&emsp;&emsp;        height: 25%;
+                <br>&emsp;&emsp;    }
+                <br>
+                <br>&emsp;&emsp;    [class^="label_"]:not(:last-child) {
+                <br>&emsp;&emsp;&emsp;&emsp;        border-bottom: 1px solid black;
+                <br>&emsp;&emsp;    }
+                <br>}
+                <br>
+                <br>[class^="label_"]:hover {
+                <br>&emsp;&emsp;    color: #444;
+                <br>&emsp;&emsp;    background-color: #ffeed9;
+                <br>}
+                <br>
+                <br>#button_a:checked ~ #carousel-navigation .label_a,
+                <br>#button_b:checked ~ #carousel-navigation .label_b,
+                <br>#button_c:checked ~ #carousel-navigation .label_c,
+                <br>#button_d:checked ~ #carousel-navigation .label_d {
+                <br>&emsp;&emsp;    cursor: default;
+                <br>&emsp;&emsp;    color: #fff;
+                <br>&emsp;&emsp;    background-color: #222;
+                <br>}
+            </code>
+            <h3 class="block-title">Result</h3>
+            <div id="carousel-container" style="margin: 0px;">
+                <input hidden type="radio" name="carousel-control" id="button_a" checked/>
+                <input hidden type="radio" name="carousel-control" id="button_b"/>
+                <input hidden type="radio" name="carousel-control" id="button_c"/>
+                <input hidden type="radio" name="carousel-control" id="button_d"/>
+                <div id="carousel">
+                    <div class="p-wrapper">
+                        <section class="panel_a">
+                            <h1>Team 1</h1>
+                            <h2>Name</h2>
+                            <p>This team is pretty fire not gonna lie. Insert whatever text and images and headings you want in this section.</p>
+                        </section>
+                        <section class="panel_b">
+                            <h1>Team 2</h1>
+                            <h2>Name</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?</p>
+                        </section>
+                        <section class="panel_c">
+                            <h1>Team 3</h1>
+                            <h2>Name</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?</p>
+                        </section>
+                        <section class="panel_d">
+                            <h1>Team 4</h1>
+                            <h2>Name</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus veritatis nobis accusantium, odio perspiciatis expedita vero dolore distinctio dicta temporibus sunt? Nemo illo minima numquam asperiores nihil sunt quaerat pariatur?</p>
+                        </section>
+                    </div>
+                </div>
+                <div id="carousel-navigation">
+                    <label for="button_a" class="label_a"><span>Team 1</span></label>
+                    <label for="button_b" class="label_b"><span>Team 2</span></label>
+                    <label for="button_c" class="label_c"><span>Team 3</span></label>
+                    <label for="button_d" class="label_d"><span>Team 4</span></label>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script src="../scripts/scroll-animation.js"></script>
+<script src="../scripts/css.js"></script>
 <script>
+    let sWidth = screen.width;
+
     function hamburgerMenu() {
         const x = document.getElementById("responsiveNav");
         if (x.className === "topnav") {
             x.className += " responsive";
         } else {
             x.className = "topnav";
+        }
+    }
+
+    function expandTable() {
+        const content = document.getElementById("expand-table-info");
+        const button = document.getElementById("expand-table-button");
+        const icon = document.getElementById("expand-table-icon");
+        if(getComputedStyle(content).height == "0px") {
+            content.style.height = "100%";
+            icon.classList.remove("rotate");
+        }
+        else {
+            content.style.height = "0px";
+            icon.classList.add("rotate");
+        }
+    }
+
+    function expandImage() {
+        const content = document.getElementById("expand-image-info");
+        const button = document.getElementById("expand-image-button");
+        const icon = document.getElementById("expand-image-icon");
+        if(getComputedStyle(content).height == "0px") {
+            content.style.height = "100%";
+            icon.classList.remove("rotate");
+        }
+        else {
+            content.style.height = "0px";
+            icon.classList.add("rotate");
+        }
+    }
+
+    function expandCarousel() {
+        const content = document.getElementById("expand-carousel-info");
+        const button = document.getElementById("expand-carousel-button");
+        const icon = document.getElementById("expand-carousel-icon");
+        if(getComputedStyle(content).height == "0px") {
+            content.style.height = "100%";
+            icon.classList.remove("rotate");
+            if(sWidth > 1200) {
+                button.style.borderBottomLeftRadius="0px";
+                button.style.borderBottomRightRadius="0px";
+            }
+        }
+        else {
+            content.style.height = "0px";
+            icon.classList.add("rotate");
+            if(sWidth > 1200) {
+                button.style.borderBottomLeftRadius="25px";
+                button.style.borderBottomRightRadius="25px";
+            }
         }
     }
 </script>
